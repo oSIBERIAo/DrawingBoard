@@ -1,0 +1,165 @@
+body{
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #999;
+    /*解决ios上滑动不流畅*/
+    -webkit-overflow-scrolling: touch;
+}
+body{
+  margin: 0px;
+}
+button{ 
+ outline:none;
+}
+button:hover{ 
+ outline: 20px;
+}
+#board{
+  background:white;
+}
+#pen,#eraser,#undo,#redo,#save,#clean,#color{
+  position: fixed;
+  height: 48px;
+  width: 48px;
+  border: 0;
+  cursor: Pointer;
+}
+#eraser{
+  bottom: 10px;
+  left: 10px;
+  background:url(icon/eraser.svg)
+}
+#pen{
+  bottom: 10px;
+  left: 10px;
+  background:url(icon/pen.svg)
+}
+#undo{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background:url(icon/undo.svg)
+}
+#redo{
+  position: fixed;
+  top: 10px;
+  left: 82px;
+  background:url(icon/redo.svg)
+}
+#save{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background:url(icon/save.svg)  
+}
+#clean{
+  position: fixed;
+  top: 10px;
+  right: 82px; 
+  height: 48px;
+  width: 48px;
+  background:url(icon/clean.svg)  
+}
+#color{
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+::-webkit-color-swatch { 
+    height: 40px; 
+    width: 40px;
+    position:relative; 
+    left: 0px; 
+    top:0px;
+    border-radius: 50%;
+}
+#size{
+  position: fixed;
+  bottom: 18px;
+  right: 80px;
+  border-radius: 15px;
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 130px; /* Full-width */
+  height: 26px;/* Specified height */
+  /* background: #D2D2D2; */
+  /* background: linear-gradient(to right, blue, white); */
+  background: url('icon/width_bg.svg');
+  background-size: cover;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s; 
+}
+#size::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    
+    background: url('icon/width.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.jscolor{
+  position: fixed;
+  height: 42px;
+  width: 42px;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 100%;
+}
+@media (max-width: 800px) {
+  .jscolor{
+  height: 44px;
+  width: 38px;
+ }
+ #size{
+     display: none;
+ }
+}
+#board{
+  /* background: white; */
+  display: block;
+  height:100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.actions > #pen{
+  display: none;
+}
+.actions > #eraser{
+  display: inline-block;
+}
+.actions.x > #pen{
+  display: inline-block;
+}
+.actions.x > #eraser{
+  display: none;
+}
+.WidthSet{
+    display: none;
+}
+
+/* input[type='range']::-webkit-slider-thumb {  
+        -webkit-appearance: none;
+        border: 5px solid #fff;
+        height: 14px;
+        width: 14px;
+        border-radius: 8px;
+        background: #1ba1e2;
+        cursor: pointer;
+    }
+    input[type='range']::-moz-range-thumb {
+        border: 3px solid #fff;
+        height: 7px;
+        width: 7px;
+        border-radius: 8px;
+        background: #1ba1e2;
+        cursor: pointer;
+    } */
+
+    
