@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <link rel="manifest" href="pwa.json" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <canvas id="board"></canvas>
+    <div id="actions" class="actions">
+        <button id="eraser"></button>
+        <button id="pen"></button>
+        <button id="undo"></button>
+        <button id="redo"></button>
+        <button id="save"></button>
+        <button id="clean"></button>
+        <input id="size" class="size" type="range" name="points" min="1" max="8" />
+        <input type="color" class="color" id="color">
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
